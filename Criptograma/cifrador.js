@@ -38,6 +38,7 @@ function cifrar(texto) {
 function descifrar(texto) {
   return traducir(invertir(traducir(texto, SUSTITUCION, PLANO)), SUSTITUCION, PLANO);
 }
+
 // ================= PARTE 2: ARCHIVOS =================
 // Esta parte NO se modifica.
 const selector = document.getElementById("archivo");
