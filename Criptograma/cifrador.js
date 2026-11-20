@@ -2,9 +2,7 @@
 // Debe definir dos funciones: cifrar(texto) y descifrar(texto)
 // ===== Alfabetos =====
 const MAYUS = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-const MINUS = "abcdefghijklmnñopqrstuvwxyz";
 const TILDES_MAYUS = "ÁÉÍÓÚÜ";
-const TILDES_MINUS = "áéíóúü";
 const NUMEROS = "1234567890";
 const SIMBOLOS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
@@ -24,7 +22,7 @@ const CLAVE_MAYUS = "MZQKXAVRSTPNÑJCYFHWGLDBUIOE";
 const CLAVE_TILDES = "ÍÉÜÁÚÓ";
 const CLAVE_NUMEROS = "3840651297";
 const CLAVE_SIMBOLOS = "~#@!_+{}$;?&[)=^%<`*|\"-:./\\'>,(]";
-const PLANO = MAYUS + MINUS + TILDES_MAYUS + TILDES_MINUS + NUMEROS + SIMBOLOS;
+const PLANO = MAYUS + MAYUS.toLowerCase() + TILDES_MAYUS + TILDES_MAYUS.toLowerCase() + NUMEROS + SIMBOLOS;
 const SUSTITUCION = CLAVE_MAYUS + CLAVE_MAYUS.toLowerCase() + CLAVE_TILDES + CLAVE_TILDES.toLowerCase() + CLAVE_NUMEROS + CLAVE_SIMBOLOS;
 
 function invertir(texto) {
